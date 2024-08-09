@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Interior Design</title>
+    <style>
+        
+        .image-sec {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .image-sec img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark background behind the text for better readability */
+            padding: 20px;
+            transition: all 1s ease; /* Smooth transition */
+            font-size: xx-large;
+            background: transparent;
+        }
+
+        .text-overlay p {
+            color: rgb(255, 255, 255);
+        }
+
+        .text-overlay.centered {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+            background: none; /* Remove the dark background when centered, if desired */
+        }
+        .two-column-section {
+            padding: 50px;
+            background-color: #cfccbf;
+            text-align: center;
+        }
+
+        .two-column-section h2 {
+            font-size: 38px;
+            color: #2f162d;
+        }
+
+        .two-column-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .column img {
+            width: 100%;
+            border: 5px solid rgb(192, 143, 54);
+            border-radius: 15px;
+        }
+
+        .column p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align:justify;
+        }
+
+        .column button {
+            background-color: rgb(192, 143, 54);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+        .content-section1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2e112c;
+            height: fit-content;
+        }
+
+        .main-heading {
+            text-align: center;
+            font-size: 32px;
+            color:rgb(192, 143, 54);
+            margin-bottom: 20px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .text-column {
+            flex: 1;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .text-column h2 {
+            font-size: 38px;
+            color: rgb(153, 115, 44);
+            text-align: center;
+        }
+
+        .text-column p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #b8ba99;
+            text-align: justify;
+        }
+
+        .text-column button {
+            background-color: rgb(192, 143, 54);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+
+        .image-column {
+            flex: 0.8;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .image-column img {
+            width: 100%;
+            border: 5px solid rgb(192, 143, 54);
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/l2-removebg-preview.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>                
+                <div class="dropdown1">
+                <li><a href="design.html" class="nav-item dropdown-toggle1">Designs</a></li>
+                <div class="dropdown-menu1">
+                    <a href="design_interior.html">Interior Design</a>
+                    <a href="Commercial_Interiors.html">Commercial Design</a>
+                    <a href="design_shop.html">Store Design</a>
+                  </div>
+                </div>
+                <li><a href="about_us.html" class="nav-link" id="about-link">About Us</a></li>
+                <div class="dropdown">
+                    <li><a href="services.html" class="nav-item dropdown-toggle">Services</a></li>
+                    <div class="dropdown-menu">
+                      <a href="services.html">Interiors</a>
+                      <a href="Commercial_Interiors.html">Commercial Interiors</a>
+                      <a href="store.html">Store</a>
+                    </div>
+                </div>
+                <li><a href="projects.html" class="nav-link" id="projects-link">Our Projects</a></li>
+                <li><a href="blog.html" class="nav-link" id="blog-link">Blog</a></li>
+                <li><a href="contact-us.html" class="nav-link" id="contact-link">Contact Us</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+    <section class="image-sec">
+        <img src="assets/liv2.jpg" alt="Interior Design">
+        <div class="text-overlay" id="text-overlay">
+            <h1>Interior Design Services</h1>
+            <p>by Fayaz Interior Decorators best interior design solutions</p>
+        </div>
+    </section>
+    <section class="two-column-section">
+        <h2>About Us</h2>
+        <div class="two-column-content">
+            <div class="column">
+                <img src="assets/b1.jpg" alt="Interior Design">
+            </div>
+            <div class="column">
+                <h2>Fayaz Interior Design Solutions</h2>
+                <p>
+                    At Fayaz Interiors Tambaram, we pride ourselves on delivering exceptional interior design solutions that transform spaces and elevate lifestyles. Located in the heart of Tambaram, our team of skilled designers and craftsmen work tirelessly to create beautiful, functional, and unique interiors tailored to each client's needs and preferences. With years of experience in the industry, we specialize in a wide range of services, including residential and commercial interior design, space planning, and customized furniture solutions. Our commitment to quality, attention to detail, and dedication to customer satisfaction have earned us a reputation as one of the leading interior design firms in the region. At Fayaz Interiors Tambaram, we believe that every space has a story to tell, and we are here to help you tell yours. Let us bring your vision to life and create a home or office that reflects your style and personality. Visit us today to start your journey towards a more beautiful and inspiring space.</p>
+               <a href="contact-us.html"> <button>Contact-us</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="content-section1">
+        <h1 class="main-heading">Our Approach</h1>
+        <div class="content-wrapper">
+            <div class="text-column">
+                <h2>Designing spaces that tell your story through collaboration and creativity</h2>
+                <p>
+                    At Fayaz Interiors Tambaram, we believe in a collaborative approach to design. We work closely with our clients to understand their vision, needs, and preferences. Our process includes:
+
+   <p> 1.Consultation: We start with an in-depth consultation to understand your requirements and expectations.</p>
+<p>2.Design Concept: Our team develops a design concept that aligns with your vision and budget.</p>
+<p>3.Execution: We bring the design to life with precision and attention to detail.</p>
+<p>4.Final Touches: We add the finishing touches to ensure everything is perfect.</p>
+
+ </p>
+                
+            </div>
+            <div class="image-column">
+                <img src="assets/ap.jpg" alt="Interior Design Image">
+            </div>
+        </div>
+    </section>
+    <section class="two-column-section">
+        <h2>Why Choose Us?</h2>
+        <div class="two-column-content">
+            <div class="column">
+                <img src="assets/h2.jpg" alt="Interior Design">
+            </div>
+            <div class="column">
+                <h2>Inspired designs, flawless execution</h2>
+                
+                           
+                        <p> <strong>Experience:</strong> With years of experience in the industry, we have the expertise to handle projects of all sizes and complexities.</p>
+                            
+                        <p><strong>Quality:</strong> We use only the finest materials and craftsmanship to ensure the highest quality results.</p>
+                            
+                        <p><strong>Customer Satisfaction:</strong> Our commitment to customer satisfaction is unwavering. We go above and beyond to exceed your expectations.</p>
+                           
+                        <p> <strong>Innovative Designs:</strong> Our designs are innovative, stylish, and tailored to your unique needs.</p>
+                            
+                        <p><strong>Transparency:</strong> We believe in transparent communication and pricing, ensuring that you are always informed and involved in the process.</p>
+                
+                
+            </div>
+        </div>
+    </section>
+    <div class="floating-contact">
+        <a href="tel:+1234567890">
+          <img src="assets/phone.jpg" alt="Phone">
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="assets/whats.avif" alt="WhatsApp">
+        </a>
+      </div>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <img src="assets/l2-removebg-preview.png" alt="fayaz Logo" class="logo">
+            <div class="social-media">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>OFFERINGS</h4>
+            <ul>
+                <li><a href="#">Interiors</a></li>
+                <li><a href="#">Commercial Interiors</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>GET INSPIRED</h4>
+            <ul>
+                <li><a href="#">Design Ideas</a></li>
+                <li><a href="#">Magazine</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>COMPANY</h4>
+            <ul>
+                <li><a href="#">Refer a Friend</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Livspace Reviews</a></li>
+                <li><a href="#">Our Locations</a></li>
+                <li><a href="#">How it Works</a></li>
+                <li><a href="#">Policies</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Own a Franchise</a></li>
+                <li><a href="#">Interior Designer</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-section">
+            <h4>CONTACT US</h4>
+            <p>Call us: 9874563210</p>
+            <p>Email us: care@fayaz.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Fayaz.com All Rights Reserved</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        var textOverlay = document.getElementById('text-overlay');
+        textOverlay.classList.add('centered');
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      let closeDropdownTimeout;
+
+      const showDropdown = () => {
+        dropdown.classList.add('show');
+        clearTimeout(closeDropdownTimeout);
+      };
+
+      const hideDropdown = () => {
+        closeDropdownTimeout = setTimeout(() => {
+          dropdown.classList.remove('show');
+        }, 500); // Adjust delay in milliseconds (500ms = 0.3s)
+      };
+
+      dropdownToggle.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent navigation on click
+        event.stopPropagation();
+        dropdown.classList.toggle('show');
+      });
+
+      dropdownToggle.addEventListener('mouseenter', showDropdown);
+      dropdownMenu.addEventListener('mouseenter', showDropdown);
+      dropdown.addEventListener('mouseleave', hideDropdown);
+
+      dropdownMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
+
+      document.addEventListener('click', () => {
+        dropdown.classList.remove('show');
+      });
+    });
+    // dropdownMenu1
+    document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggle1 = document.querySelector('.dropdown-toggle1');
+  const dropdown1 = document.querySelector('.dropdown1');
+  const dropdownMenu1 = document.querySelector('.dropdown-menu1');
+  let closeDropdownTimeout1;
+
+  const showDropdown1 = () => {
+    dropdown1.classList.add('show');
+    clearTimeout(closeDropdownTimeout1);
+  };
+
+  const hideDropdown1 = () => {
+    closeDropdownTimeout1 = setTimeout(() => {
+      dropdown1.classList.remove('show');
+    }, 5000); // Increased delay to 500ms
+  };
+
+  dropdownToggle1.addEventListener('mouseenter', showDropdown1);
+  dropdownMenu1.addEventListener('mouseenter', showDropdown1);
+  dropdown1.addEventListener('mouseenter', showDropdown1);
+
+  dropdownToggle1.addEventListener('mouseleave', hideDropdown1);
+  dropdownMenu1.addEventListener('mouseleave', hideDropdown1);
+  dropdown1.addEventListener('mouseleave', hideDropdown1);
+
+  dropdownToggle1.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent navigation on click
+    event.stopPropagation();
+    dropdown1.classList.toggle('show');
+  });
+
+  dropdownMenu1.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent dropdown from closing on clicking inside the menu
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!dropdown1.contains(event.target) && !dropdownToggle1.contains(event.target)) {
+      dropdown1.classList.remove('show'); // Close dropdown if clicking outside
+    }
+  });
+});
+
+</script>
+</body>
+</html>

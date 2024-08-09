@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Interior Design</title>
+    <style>
+        .gallery-heading {
+            font-size: 36px;
+            color: #2f162d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .gallery-subheading {
+            font-size: 18px;
+            color: #2f162d;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .gallery-section3 {
+            padding: 50px;
+            background-color: #cfccbf;
+        }
+
+        .gallery-grid2 {
+            column-count: 4;
+            column-gap: 0.5em;
+            grid-template-columns: masonry;
+        }
+
+        .gallery-items {
+            break-inside: avoid;
+            margin-bottom: 1 em;
+            position: relative;
+        }
+
+        .gallery-items img {
+            width: 100%;
+            border-radius: 15px;
+            border: 3px solid #cab03d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 1200px) {
+            .gallery-grid2 {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid2 {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid2 {
+                column-count: 1;
+            }
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 10%;
+            height: 200px;
+            background-color: #cfccbf;
+        }
+
+        .cta-section p {
+            font-size: 34px;
+            color: #2f162d;
+            margin-bottom: 20px;
+        }
+
+        .cta-section .cta-button {
+            background-color: #cab03d;
+            color: #cfccbf;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .cta-section .cta-button:hover {
+            background-color: #b09f53;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #ffffffd8;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 370px;
+            border-radius: 10px;
+            height: 500px;
+        }
+
+        .modal-header, .modal-footer {
+            padding: 10px;
+            background-color: #461742;
+            color: #a89644;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .modal-body {
+            padding: 10px 20px;
+        }
+
+        .modal-body input, .modal-body button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/l2-removebg-preview.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="nav-link" id="home-link">Home</a></li>                
+                <div class="dropdown1">
+                <li><a href="design.html" class="nav-item dropdown-toggle1">Designs</a></li>
+                <div class="dropdown-menu1">
+                    <a href="design_interior.html">Interior Design</a>
+                    <a href="Commercial_Interiors.html">Commercial Design</a>
+                    <a href="design_shop.html">Store Design</a>
+                  </div>
+                </div>
+                <li><a href="about_us.html" class="nav-link" id="about-link">About Us</a></li>
+                <div class="dropdown">
+                    <li><a href="services.html" class="nav-item dropdown-toggle">Services</a></li>
+                    <div class="dropdown-menu">
+                      <a href="services.html">Interiors</a>
+                      <a href="Commercial_Interiors.html">Commercial Interiors</a>
+                      <a href="store.html">Store</a>
+                    </div>
+                </div>
+                <li><a href="projects.html" class="nav-link" id="projects-link">Our Projects</a></li>
+                <li><a href="blog.html" class="nav-link" id="blog-link">Blog</a></li>
+                <li><a href="contact-us.html" class="nav-link" id="contact-link">Contact Us</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery-section3">
+        <h1 class="gallery-heading">Inspiration for Commercial Interior Designs</h1>
+        <p class="gallery-subheading">Elevate your business space with these curated commercial interior design ideas.</p>
+        <div class="gallery-grid2">
+            <div class="gallery-items"><img src="assets/o1.jpg" alt="Living Room"></div>
+            <div class="gallery-items"><img src="assets/o10.jpg" alt="Master Bedroom"></div>
+            <div class="gallery-items"><img src="assets/o2.jpg" alt="False Ceiling"></div>
+            <div class="gallery-items"><img src="assets/o3.jpg" alt="Modern Kitchen"></div>
+            <div class="gallery-items"><img src="assets/offi1.jpg" alt="Dining Room"></div>
+            <div class="gallery-items"><img src="assets/k2.jpg" alt="Kids Room"></div>
+            <div class="gallery-items"><img src="assets/o10.jpg" alt="Living Room"></div>
+            <div class="gallery-items"><img src="assets/014.jpg" alt="Master Bedroom"></div>
+            <div class="gallery-items"><img src="assets/015.jpg" alt="False Ceiling"></div>
+            <div class="gallery-items"><img src="assets/014.jpg" alt="Modern Kitchen"></div>
+            <div class="gallery-items"><img src="assets/off3.jpg" alt="Dining Room"></div>
+            <div class="gallery-items"><img src="assets/off4.jpg" alt="Master Bedroom"></div>
+            <div class="gallery-items"><img src="assets/st14.jpg" alt="False Ceiling"></div>
+            <div class="gallery-items"><img src="assets/011.jpg" alt="Modern Kitchen"></div>
+            <div class="gallery-items"><img src="assets/st16.jpg" alt="Dining Room"></div>
+            <div class="gallery-items"><img src="assets/st17.jpg" alt="Kids Room"></div>
+            <div class="gallery-items"><img src="assets/012.jpg" alt="False Ceiling"></div>
+            <div class="gallery-items"><img src="assets/st19.jpg" alt="Modern Kitchen"></div>
+            <div class="gallery-items"><img src="assets/st20.jpg" alt="Dining Room"></div>
+            <div class="gallery-items"><img src="assets/st21.jpg" alt="Kids Room"></div>
+            <div class="gallery-items"><img src="assets/013.jpg" alt="Master Bedroom"></div>
+            <div class="gallery-items"><img src="assets/st23.jpg" alt="False Ceiling"></div>
+            <div class="gallery-items"><img src="assets/o7.jpg" alt="Modern Kitchen"></div>
+            <div class="gallery-items"><img src="assets/st25.jpg" alt="Dining Room"></div>
+            <div class="gallery-items"><img src="assets/st26.jpg" alt="Kids Room"></div>
+            <div class="gallery-items"><img src="assets/st13.jpg" alt="Master Bedroom"></div>
+            <div class="gallery-items"><img src="assets/o4.jpg" alt="False Ceiling"></div>
+            <div class="gallery-items"><img src="assets/st15.jpg" alt="Modern Kitchen"></div>
+            <div class="gallery-items"><img src="assets/o7.jpg" alt="Dining Room"></div>
+            
+            <div class="gallery-items"><img src="assets/img1.jpg" alt="Dining Room"></div>
+            <div class="gallery-items"><img src="assets/img2.jpg" alt="Kids Room"></div>
+        </div>
+        <section class="cta-section">
+            <p>Your dream home is just a click away</p>
+            <button class="cta-button" id="getStartedBtn">GET STARTED</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Talk to a Shop Designer</h2>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email ID">
+                        <input type="tel" placeholder="Phone number">
+                        <input type="text" placeholder="Property Name">
+                        <button class="cta-button">GET FREE CONSULTATION</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="floating-contact">
+        <a href="tel:+1234567890">
+          <img src="assets/phone.jpg" alt="Phone">
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="assets/whats.avif" alt="WhatsApp">
+        </a>
+      </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="assets/l2-removebg-preview.png" alt="fayaz Logo" class="logo">
+                <div class="social-media">
+                    <a href="index.html"><i class="fa fa-facebook"></i></a>
+                    <a href="about_us.html"><i class="fa fa-twitter"></i></a>
+                    <a href="services.html"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                    <a href="contact-us.html"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>OFFERINGS</h4>
+                <ul>
+                    <li><a href="#">Interiors</a></li>
+                    <li><a href="#">Commercial Interiors</a></li>
+                    <li><a href="#">Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>GET INSPIRED</h4>
+                <ul>
+                    <li><a href="#">Design Ideas</a></li>
+                    <li><a href="#">Magazine</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="#">Refer a Friend</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Livspace Reviews</a></li>
+                    <li><a href="#">Our Locations</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Policies</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Own a Franchise</a></li>
+                    <li><a href="#">Interior Designer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-section">
+                <h4>CONTACT US</h4>
+                <p>Call us: 9874563210</p>
+                <p>Email us: care@fayaz.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Fayaz.com All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("getStartedBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      let closeDropdownTimeout;
+
+      const showDropdown = () => {
+        dropdown.classList.add('show');
+        clearTimeout(closeDropdownTimeout);
+      };
+
+      const hideDropdown = () => {
+        closeDropdownTimeout = setTimeout(() => {
+          dropdown.classList.remove('show');
+        }, 500); // Adjust delay in milliseconds (500ms = 0.3s)
+      };
+
+      dropdownToggle.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent navigation on click
+        event.stopPropagation();
+        dropdown.classList.toggle('show');
+      });
+
+      dropdownToggle.addEventListener('mouseenter', showDropdown);
+      dropdownMenu.addEventListener('mouseenter', showDropdown);
+      dropdown.addEventListener('mouseleave', hideDropdown);
+
+      dropdownMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
+
+      document.addEventListener('click', () => {
+        dropdown.classList.remove('show');
+      });
+    });
+    // dropdownMenu1
+    document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggle1 = document.querySelector('.dropdown-toggle1');
+  const dropdown1 = document.querySelector('.dropdown1');
+  const dropdownMenu1 = document.querySelector('.dropdown-menu1');
+  let closeDropdownTimeout1;
+
+  const showDropdown1 = () => {
+    dropdown1.classList.add('show');
+    clearTimeout(closeDropdownTimeout1);
+  };
+
+  const hideDropdown1 = () => {
+    closeDropdownTimeout1 = setTimeout(() => {
+      dropdown1.classList.remove('show');
+    }, 5000); // Increased delay to 500ms
+  };
+
+  dropdownToggle1.addEventListener('mouseenter', showDropdown1);
+  dropdownMenu1.addEventListener('mouseenter', showDropdown1);
+  dropdown1.addEventListener('mouseenter', showDropdown1);
+
+  dropdownToggle1.addEventListener('mouseleave', hideDropdown1);
+  dropdownMenu1.addEventListener('mouseleave', hideDropdown1);
+  dropdown1.addEventListener('mouseleave', hideDropdown1);
+
+  dropdownToggle1.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent navigation on click
+    event.stopPropagation();
+    dropdown1.classList.toggle('show');
+  });
+
+  dropdownMenu1.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent dropdown from closing on clicking inside the menu
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!dropdown1.contains(event.target) && !dropdownToggle1.contains(event.target)) {
+      dropdown1.classList.remove('show'); // Close dropdown if clicking outside
+    }
+  });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .heading {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .project {
+      display: flex;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .project-content {
+      flex: 1;
+      padding-left: 20px;
+    }
+
+    .project-content h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    .project-content p {
+      margin: 10px 0;
+    }
+
+    .more-details {
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .additional-info {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .additional-info p {
+      margin: 0;
+    }
+
+    .show-less {
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heading">Recent Projects</div>
+
+    <div class="project">
+      <img src="project1.jpg" alt="Project 1">
+      <div class="project-content">
+        <h2>Project 1</h2>
+        <p>This is a brief description of Project 1.</p>
+        <a class="more-details">More details</a>
+        <div class="additional-info">
+          <p>This is the additional information about Project 1.</p>
+          <a class="show-less">Show less</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="project2.jpg" alt="Project 2">
+      <div class="project-content">
+        <h2>Project 2</h2>
+        <p>This is a brief description of Project 2.</p>
+        <a class="more-details">More details</a>
+        <div class="additional-info">
+          <p>This is the additional information about Project 2.</p>
+          <a class="show-less">Show less</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more projects as needed -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const moreDetailsButtons = document.querySelectorAll('.more-details');
+      const showLessButtons = document.querySelectorAll('.show-less');
+
+      moreDetailsButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const additionalInfo = button.nextElementSibling;
+          additionalInfo.style.display = 'block';
+          button.style.display = 'none';
+        });
+      });
+
+      showLessButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const additionalInfo = button.parentElement;
+          additionalInfo.style.display = 'none';
+          additionalInfo.previousElementSibling.style.display = 'block';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
